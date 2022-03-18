@@ -1,0 +1,271 @@
+body {
+    background-color: var(--body-bg);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+
+.dark {
+    --body-bg: white;
+    --background-color: whitesmoke;
+    --special-color: rgb(255, 102, 102);
+    --shadow: black;
+    --hover-outline: rgb(212, 212, 212);
+    --hover-bg: rgb(143, 143, 143);
+    --font-color: black;
+}
+
+:root {
+    --body-bg: rgb(31, 31, 31);
+    --background-color: rgb(26, 26, 26);
+    --special-color: rgb(255, 102, 102);
+    --shadow: black;
+    --hover-outline: rgb(212, 212, 212);
+    --hover-bg: rgb(143, 143, 143);
+    --font-color: white;
+}
+
+.calculator {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px var(--shadow);
+    background-color: var(--background-color);
+    padding: 5px;
+}
+
+.button {
+    width: 5em;
+    height: 5em;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    transition: .3s;
+    color: var(--font-color);
+    /* box-shadow: 0px 5px 5px 0 rgb(175, 175, 175); */
+
+}
+
+.button-off {
+    background-color: var(--hover-bg);
+}
+
+.button:hover {
+    outline: 1px solid var(--hover-outline);
+
+}
+
+.button:active {
+    background-color: var(--hover-bg);
+}
+
+.special {
+    color: rgb(255, 102, 102);
+}
+
+.button-click {
+    background-color: var(--hover-bg);
+}
+
+.buttons {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* justify-content: stretch; */
+    /* align-items: stretch; */
+    /* overflow: hidden; */
+    /* min-width: 0; */
+    /* max-width: 0; */
+    grid-template-areas:
+        'clear bs multiply divide'
+        'nine eight seven plus'
+        'six five four minus'
+        'three two one zero'
+        'decimal equals equals equals ';
+    justify-items: center;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.decimal {
+    grid-area: decimal;
+}
+
+.bs {
+    grid-area: bs;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.display {
+    width: auto;
+    height: 20vh;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 5em;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.before {
+    font-size: 20px;
+    color: var(--font-color);
+    display: flex;
+    justify-content: end;
+    height: 20px;
+}
+
+.equals {
+    /* position: absolute; */
+    width: 16em;
+    background-color: var(--special-color);
+}
+
+#toggle {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+
+}
+
+.toggleArea {
+    background-color: white;
+    color: black;
+    /* padding: 0.2em; */
+    margin: 0 2vw;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.toggleAreaOn {
+    color: white;
+    background-color: black;
+}
+
+.toggleElement {
+    margin: 0.3em;
+}
+
+.circle {
+    position: absolute;
+    margin: 2px;
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    background-color: black;
+    transition: .3s;
+
+}
+
+.circle-on {
+    transform: translateY(1.6em);
+    background-color: white;
+}
+
+/* 
+.circle:hover {
+    transform: translateY(1.6em);
+} */
+
+@media(max-width: 750px) {
+    .calculator {
+        height: 100vh;
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    .button {
+        width: 3em;
+        height: 5em;
+    }
+
+    .toggleArea {
+        /* bottom: 0; */
+        top: 5px;
+
+    }
+
+    .display {
+        font-size: 3em;
+    }
+
+    .equals {
+        width: 60vw;
+    }
+}
