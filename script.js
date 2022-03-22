@@ -99,10 +99,14 @@ document.addEventListener('keydown', e => {
         display.innerText +=  '/';
     }
     else if(e.key ==  'Enter'){
+        before.innerHTML = display.innerHTML
+
         display.innerText =  eval(display.innerText);
     }
     else if(e.key ==  'Escape'){
         display.innerText ='';
+    before.innerHTML = '';
+
     }
     else if(e.key ==  'Backspace'){
         let StrDisplay = String(display.innerText);
