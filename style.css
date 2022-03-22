@@ -238,6 +238,11 @@ body {
     background-color: white;
 }
 
+.button:focus-visible {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
 /* 
 .circle:hover {
     transform: translateY(1.6em);
@@ -251,13 +256,19 @@ body {
     }
 
     .button {
+        border: 0 !important;
+        outline: 0 !important;
+        height: 70%;
+    }
+
+    .button {
         width: 3em;
         height: 5em;
     }
 
     .toggleArea {
         /* bottom: 0; */
-        top: 5px;
+        top: 10px;
 
     }
 
