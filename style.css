@@ -250,7 +250,7 @@ body {
 
 @media(max-width: 750px) {
     .calculator {
-        /* height: 100vh; */
+        height: 100vh;
         width: 100vw;
         box-shadow: none;
     }
