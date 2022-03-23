@@ -258,7 +258,8 @@ body {
     .button {
         border: 0 !important;
         outline: 0 !important;
-        height: 70%;
+        height: 6.5em !important;
+        /* height: 70%; */
     }
 
     .button {
